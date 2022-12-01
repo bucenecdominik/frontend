@@ -16,7 +16,7 @@ class App extends Component {
 
     async componentDidMount() {
       try {
-        const res = await fetch('http://localhost:8000/api/report/list/');
+        const res = await fetch('http://46.28.110.196:80/api/report/list/');
         const todoList = await res.json();
         this.setState({
           todoList
