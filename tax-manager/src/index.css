@@ -7,12 +7,13 @@
   --tertiary-color: #ffffff;
 }
 
+
 /*Navbar*/
 nav{
   display: inline;
   border-bottom: var(--secondary-color) solid 4px;
-  position: fixed;
   width: 100%;
+  position: fixed;
 }
 
 .navbar-header{
@@ -35,7 +36,6 @@ nav{
 }
 
 #login{
-  /*padding: 12px 16px;*/
   float: right;
   font-family: "Lexend Giga";
   color: var(--primary-color);
@@ -43,7 +43,6 @@ nav{
   display: flex;
   cursor: pointer;
 }
-
 
 .dropdown {
   margin: 15px;
@@ -65,7 +64,7 @@ nav{
 
 .dropdown-content a {
   color: var(--tertiary-color);
-  padding: 12px 16px;
+  padding: 12px;
   text-decoration: none;
   display: block;
 }
@@ -79,31 +78,94 @@ nav{
   scale: 1.022;
 }
 
-.reporty-dropdown{
+.reporty-span {
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.reporty-dropdown {
   display: none;
   position: absolute;
   background-color: var(--primary-color);
+  min-width: 160px;
+  z-index: 1;
 }
 
-.reporty-dropdown a{
-  color: var(--tertiary-color);
+.reporty-dropdown a {
+  color: white;
   text-decoration: none;
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+
+.reporty-dropdown a:hover {
+  color: var(--tertiary-color);
+  transition: 0.3s ease-in-out;
+  scale: 1.010;
+}
+
+.reporty-span:hover .reporty-dropdown {
   display: block;
 }
 
-.reporty-span:hover .reporty-dropdown{
-  display: inherit;
+.Main{
+  padding-top: 10%;
+  font-family: "arial";
 }
 
-.reporty-dropdown a:hover{
-  transition: 0.3s ease-in-out;
-  scale: 1.022;
+.main-wrapper{
+  display: flex;
 }
 
-.reporty-span{
-  display: inline;
+.main-text-header{
+  padding: 10px;
+  font-weight: 500;
 }
 
+.main-text-paragraph{
+  word-break: break-all;
+  max-width: 70%;
+  padding-left: 10px;
+}
+
+.main-form{
+  padding-right: 5%;
+}
+
+form{
+  padding: 30px;
+  display: grid;
+}
+
+input{
+  border-radius: 20px;
+  padding: 8px;
+  margin: 10px;
+  border: var(--secondary-color) 2px solid;
+  text-align: center;
+}
+
+#big-input{
+  height: 80px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.btn{
+  border-radius: 18px;
+  border: hidden;
+  font-size: 22px;
+  padding: 10px;
+  width: 100px;
+  margin: 20px;
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+  font-family: "Lexend";
+  transition: 0.1s ease-in;
+  font-weight: 300;
+  cursor: pointer;
+}
 
 /*Footer*/
 .footer{
@@ -133,12 +195,12 @@ nav{
   background-color: var(--primary-color);
   color: var(--tertiary-color);
   font-family: "Lexend";
-  transition: 0.3s ease-in;
+  transition: 0.1s ease-in;
   font-weight: 300;
   cursor: pointer;
 }
 
-.footer-btn:hover{
+.footer-btn:hover, .btn:hover{
   transition: 0.3s ease-in;
   transform: scale(1.050);
 }

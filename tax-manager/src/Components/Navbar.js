@@ -43,7 +43,7 @@ const [arrow, setArrow] = React.useState(false)
                     href='#' id='reporty'>Reporty 
                     <img 
                         className='arrow' 
-                        src={arrow ? "./imgs/up.svg" : "./imgs/down.svg" }>
+                        src={arrow ? "./imgs/down.svg" : "./imgs/up.svg" }>
                     </img> 
                 </a>
                 <div 
